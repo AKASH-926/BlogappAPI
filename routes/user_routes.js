@@ -27,7 +27,7 @@ userRouter.post('/signup', body('email').isEmail(), body('password').isLength({ 
                 })
             } catch (e) {
                 res.status(400).json({
-                    status: 'Signup not Succesfull',
+                    status: 'Email aldready present',
                     message: e.message
                 })
             }
